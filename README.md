@@ -10,7 +10,7 @@ A Next.js starter for your next blog or personal site. Built with:
 - Formatting with [Prettier](https://prettier.io/)
 - Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
 
-👀 [View the Live Demo]("") (Coming Soon)
+👀 [View the Live Demo](https://nextjs-typescript-mdx-blog-starter.vercel.app/)
 
 ## Getting Started
 
