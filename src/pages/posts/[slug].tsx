@@ -13,10 +13,10 @@ import rehypeCodeTitles from 'rehype-code-titles';
 import rehypePrism from 'rehype-prism-plus';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
-import Layout, { WEBSITE_HOST_URL } from '../../components/Layout';
 import { MetaProps } from '../../types/layout';
 import { PostType } from '../../types/post';
 import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils';
+import Layout, { WEBSITE_HOST_URL } from '../../components/Layout';
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -35,7 +35,7 @@ type PostPageProps = {
 
 const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
   const customMeta: MetaProps = {
-    title: `${frontMatter.title} - Hunter Chang`,
+    title: `${frontMatter.title} - Marjannnnnn`,
     description: frontMatter.description,
     image: `${WEBSITE_HOST_URL}${frontMatter.image}`,
     date: frontMatter.date,
