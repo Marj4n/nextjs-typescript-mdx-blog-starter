@@ -16,6 +16,10 @@ A Next.js starter for your next blog or personal site. Built with:
 ```bash
 npx create-next-app -e https://github.com/shadcn/next-template
 
+or
+
+yarn create next-app -e https://github.com/shadcn/next-template
+
 cd [project-name]
 ```
 
