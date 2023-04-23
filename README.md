@@ -26,5 +26,14 @@ yarn dev
 # or
 npm run dev
 ```
+### OR (with npx template)
+
+```bash
+npx create-next-app -e https://github.com/Marjannnnnn/nextjs-typescript-mdx-blog-starter
+
+cd [project-name]
+
+npm run dev
+``` 
 
 Your new site will be up at http://localhost:3000/
