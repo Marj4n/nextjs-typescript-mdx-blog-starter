@@ -14,11 +14,11 @@ A Next.js starter for your next blog or personal site. Built with:
 ## Usage
 
 ```bash
-npx create-next-app -e https://github.com/shadcn/next-template
+npx create-next-app -e https://github.com/Marjannnnnn/nextjs-typescript-mdx-blog-starter
 
 or
 
-yarn create next-app -e https://github.com/shadcn/next-template
+yarn create next-app -e https://github.com/Marjannnnnn/nextjs-typescript-mdx-blog-starter
 
 cd [project-name]
 ```
