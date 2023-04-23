@@ -14,7 +14,7 @@ export const About = (): JSX.Element => {
     >
       <h1>About Page</h1>
       <p>Welcome to the about page</p>
-      <h2>This is toast:</h2>
+      <h2 className="pb-4">This is toast :</h2>
       <Button
         variant="outline"
         onClick={() => {

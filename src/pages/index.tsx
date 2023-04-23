@@ -1,12 +1,11 @@
 import React from "react"
 import { GetStaticProps } from "next"
 import Link from "next/link"
+import Layout from "@/components/Layout"
+import { Button } from "@/components/ui/button"
+import { getAllPosts } from "@/lib/api"
+import { PostType } from "@/types/post"
 import { format, parseISO } from "date-fns"
-
-import Layout from "../components/Layout"
-import { Button } from "../components/ui/button"
-import { getAllPosts } from "../lib/api"
-import { PostType } from "../types/post"
 
 type IndexProps = {
   posts: PostType[]
@@ -18,10 +17,46 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
       <h1>Home Page</h1>
       <p>Next.js starter for your next blog or personal site. Built with:</p>
       <ul className="my-6 list-disc pl-4">
-        <li>Next.js</li>
-        <li className="mt-2">Typescript</li>
-        <li className="mt-2">MDX</li>
-        <li className="mt-2">Tailwind CSS</li>
+        <li>
+          <a
+            href={"https://nextjs.org/"}
+            className="text-gray-900 dark:text-white"
+          >
+            Next.js
+          </a>
+        </li>
+        <li className="mt-2">
+          <a
+            href={"https://www.typescriptlang.org/"}
+            className="text-gray-900 dark:text-white"
+          >
+            Typescript
+          </a>
+        </li>
+        <li className="mt-2">
+          <a
+            href={"https://mdxjs.com/"}
+            className="text-gray-900 dark:text-white"
+          >
+            MDX
+          </a>
+        </li>
+        <li className="mt-2">
+          <a
+            className="text-gray-900 dark:text-white"
+            href={"https://tailwindcss.com/"}
+          >
+            Tailwind CSS
+          </a>
+        </li>
+        <li className="mt-2">
+          <a
+            className="text-gray-900 dark:text-white"
+            href={"https://ui.shadcn.com/"}
+          >
+            Shadcn
+          </a>
+        </li>
       </ul>
 
       <Link href="https://github.com/Marjannnnnn/nextjs-typescript-mdx-blog-starter">
