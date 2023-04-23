@@ -1,20 +1,20 @@
-import NextHead from 'next/head';
-import { useRouter } from 'next/router';
-import React from 'react';
-import { MetaProps } from '../types/layout';
+import React from "react"
+import NextHead from "next/head"
+import { useRouter } from "next/router"
+import { MetaProps } from "@/types/layout"
 
-export const WEBSITE_HOST_URL = 'https://nextjs-typescript-mdx-blog.vercel.app';
+export const WEBSITE_HOST_URL = "https://nextjs-typescript-mdx-blog.vercel.app"
 
 const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
-  const router = useRouter();
+  const router = useRouter()
   const meta: MetaProps = {
-    title: 'Marjannnnnn - Website',
+    title: "Marjannnnnn - Website",
     description:
-      'Sleep Deprived Father. Senior Web Developer. Lover of all things Ramen and Kpop.',
+      "Sleep Deprived Father. Senior Web Developer. Lover of all things Ramen and Kpop.",
     image: `${WEBSITE_HOST_URL}/images/site-preview.png`,
-    type: 'website',
+    type: "website",
     ...customMeta,
-  };
+  }
 
   return (
     <NextHead>
@@ -36,7 +36,7 @@ const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
         <meta property="article:published_time" content={meta.date} />
       )}
     </NextHead>
-  );
-};
+  )
+}
 
-export default Head;
+export default Head

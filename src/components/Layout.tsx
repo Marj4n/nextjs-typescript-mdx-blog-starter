@@ -1,14 +1,15 @@
-import React from 'react';
-import Head from './Head';
-import Navigation from './Navigation';
-import { MetaProps } from '../types/layout';
+import React from "react"
+import { MetaProps } from "@/types/layout"
+
+import Head from "./Head"
+import Navigation from "./Navigation"
 
 type LayoutProps = {
-  children: React.ReactNode;
-  customMeta?: MetaProps;
-};
+  children: React.ReactNode
+  customMeta?: MetaProps
+}
 
-export const WEBSITE_HOST_URL = 'https://nextjs-typescript-mdx-blog.vercel.app';
+export const WEBSITE_HOST_URL = "https://nextjs-typescript-mdx-blog.vercel.app"
 
 const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
   return (
@@ -18,11 +19,11 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
         <Navigation />
       </header>
       <main className="relative ">
-        <div className="max-w-5xl px-8 py-4 mx-auto">{children}</div>
+        <div className="mx-auto max-w-5xl px-8 py-4">{children}</div>
       </main>
       <footer className="py-8">
-        <div className="max-w-5xl px-8 mx-auto">
-          Built by{' '}
+        <div className="mx-auto max-w-5xl px-8">
+          Built by{" "}
           <a
             className="text-gray-900 dark:text-white"
             href="https://github.com/Marjannnnnn"
@@ -32,7 +33,7 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
         </div>
       </footer>
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

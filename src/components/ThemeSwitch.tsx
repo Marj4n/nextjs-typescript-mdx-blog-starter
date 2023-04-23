@@ -1,5 +1,5 @@
-import { useTheme } from 'next-themes';
-import React from 'react';
+import React from "react"
+import { useTheme } from "next-themes"
 
 /**
  * Based off of gatsby-theme-novela
@@ -7,25 +7,25 @@ import React from 'react';
  */
 
 const ThemeSwitch = (): JSX.Element => {
-  const [mounted, setMounted] = React.useState(false);
-  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false)
+  const { theme, setTheme } = useTheme()
 
   // After mounting, we have access to the theme
-  React.useEffect(() => setMounted(true), []);
+  React.useEffect(() => setMounted(true), [])
 
   if (!mounted) {
-    return null;
+    return null as any
   }
 
-  const isDark = theme === 'dark';
-  const color = isDark ? '#fff' : '#000';
-  const maskColor = isDark ? '#000' : '#fff';
+  const isDark = theme === "dark"
+  const color = isDark ? "#fff" : "#000"
+  const maskColor = isDark ? "#000" : "#fff"
   return (
     <button
       className="theme-button"
       type="button"
       aria-label="Toggle Dark Mode"
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       <div className="moon-or-sun" />
       <div className="moon-mask" />
@@ -50,15 +50,15 @@ const ThemeSwitch = (): JSX.Element => {
           width: 20px;
           height: 20px;
           border-radius: 50%;
-          border: ${isDark ? '4px' : '2px'} solid;
+          border: ${isDark ? "4px" : "2px"} solid;
           border-color: ${color};
           background: ${color};
           transform: scale(${isDark ? 0.5 : 1});
           transition: all 0.45s ease;
-          overflow: ${isDark ? 'visible' : 'hidden'};
+          overflow: ${isDark ? "visible" : "hidden"};
         }
         .moon-or-sun::before {
-          content: '';
+          content: "";
           position: absolute;
           right: -9px;
           top: -9px;
@@ -67,12 +67,12 @@ const ThemeSwitch = (): JSX.Element => {
           border: 2px solid;
           border-color: ${color};
           border-radius: 50%;
-          transform: translate(${isDark ? '14px, -14px' : '0, 0'});
+          transform: translate(${isDark ? "14px, -14px" : "0, 0"});
           opacity: ${isDark ? 0 : 1};
           transition: transform 0.45s ease;
         }
         .moon-or-sun::after {
-          content: '';
+          content: "";
           width: 8px;
           height: 8px;
           border-radius: 50%;
@@ -95,13 +95,13 @@ const ThemeSwitch = (): JSX.Element => {
           border-radius: 50%;
           border: 0;
           background: ${maskColor};
-          transform: translate(${isDark ? '4px, -4px' : '0, 0'});
+          transform: translate(${isDark ? "4px, -4px" : "0, 0"});
           opacity: ${isDark ? 0 : 1};
           transition: transform 0.45s ease;
         }
       `}</style>
     </button>
-  );
-};
+  )
+}
 
-export default ThemeSwitch;
+export default ThemeSwitch

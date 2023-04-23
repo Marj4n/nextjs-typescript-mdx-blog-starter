@@ -1,6 +1,6 @@
-import { LucideProps, Twitter, type Icon as LucideIcon } from 'lucide-react';
+import { LucideProps, Twitter, type Icon as LucideIcon } from "lucide-react"
 
-export type Icon = LucideIcon;
+export type Icon = LucideIcon
 
 export const Icons = {
   instagram: (props: LucideProps) => (
@@ -25,4 +25,4 @@ export const Icons = {
       ></path>
     </svg>
   ),
-};
+}
