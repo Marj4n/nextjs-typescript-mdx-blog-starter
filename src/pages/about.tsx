@@ -20,7 +20,15 @@ export const About = (): JSX.Element => {
         onClick={() => {
           toast({
             title: "Scheduled: Catch up ",
-            description: "Friday, February 10, 2023 at 5:57 PM",
+            description: new Date().toLocaleString("en-US", {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+              hour: "numeric",
+              minute: "numeric",
+              hour12: true,
+            }),
             action: (
               <ToastAction altText="Goto schedule to undo">Undo</ToastAction>
             ),
