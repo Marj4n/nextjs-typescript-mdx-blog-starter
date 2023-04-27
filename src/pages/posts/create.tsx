@@ -10,7 +10,7 @@ import { ToastAction } from "@/components/ui/toast"
 import { useToast } from "@/components/ui/use-toast"
 import { Loader2 } from "lucide-react"
 
-const create = ({}) => {
+const CreatePost = ({}) => {
   const router = useRouter()
   const { toast } = useToast()
   const [title, setTitle] = React.useState<string>("")
@@ -132,4 +132,4 @@ ${content}
   )
 }
 
-export default create
+export default CreatePost
