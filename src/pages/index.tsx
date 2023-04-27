@@ -59,13 +59,19 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
         </li>
       </ul>
 
-      <Link href="https://github.com/Marjannnnnn/nextjs-typescript-mdx-blog-starter">
+      <Link
+        className="mr-6"
+        href="https://github.com/Marjannnnnn/nextjs-typescript-mdx-blog-starter"
+      >
         <Button
           variant="default"
           className="bg-blue-600 text-white hover:bg-blue-700"
         >
           Get the source code!
         </Button>
+      </Link>
+      <Link href="/posts/create">
+        <Button variant="outline">Create Post</Button>
       </Link>
 
       {posts.map((post) => (
