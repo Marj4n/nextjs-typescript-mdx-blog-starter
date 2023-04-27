@@ -69,7 +69,8 @@ ${content}
         // the feature is only available in development mode
         toast({
           title: "An error occurred.",
-          description: "the feature is only available in development mode.",
+          description:
+            "The feature is only available in development mode. plese clone the project and run it locally.",
           variant: "destructive",
         })
       } else {
