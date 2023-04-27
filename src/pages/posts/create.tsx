@@ -65,6 +65,13 @@ ${content}
             </ToastAction>
           ),
         })
+      } else if (process.env.NODE_ENV === "production" && !response.ok) {
+        // the feature is only available in development mode
+        toast({
+          title: "An error occurred.",
+          description: "the feature is only available in development mode.",
+          variant: "destructive",
+        })
       } else {
         throw new Error("Network response was not ok.")
       }
